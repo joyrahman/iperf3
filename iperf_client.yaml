@@ -10,7 +10,7 @@ spec:
       containers:
       - name: iperf-client-container
         image: networkstatic/iperf3
-        args: ["-c" , "10.98.170.122", "-n", "20G"]
+        args: ["-c" , "10.98.170.122", "-n", "80G"]
       restartPolicy: Never
       nodeSelector: 
         color2: red
