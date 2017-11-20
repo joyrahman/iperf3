@@ -3,6 +3,8 @@ kind: Job
 metadata:
   name: iperf
 spec:
+  parallelism: 3
+  completions: 3
   template:
     metadata:
       name: iperf-client
@@ -10,7 +12,7 @@ spec:
       containers:
       - name: iperf-client-container
         image: networkstatic/iperf3
-        args: ["-c" , "10.98.170.122", "-n", "80G"]
+        args: ["-c" , "10.99.200.173", "-n", "80G"]
       restartPolicy: Never
       nodeSelector: 
         color2: red
